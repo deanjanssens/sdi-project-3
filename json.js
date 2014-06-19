@@ -10,18 +10,23 @@ var dinnerGuests = {
     "guests": [
         {
             "dinnerGuest1" : "Jim",
-            "favoriteDrink" : "Ice Tea",
+            "comingFrom" : "Tinley Park, IL",
+            "confirmedGuest" : true,
+            "age" : 36
             
             
         },
         {
             "dinnerGuest2" : "Karen",
-            "favoriteDrink" : "Coke",
-            
+            "comingFrom" : "Tinley Park, IL",
+            "confirmedGuest" : true,
+            "age" : 46
         },
         {
              "dinnerGuest3" : "George",
-             "favoriteDrink" : "Cherry Limeade",         
+             "comingFrom" : "Tinley Park, IL",
+             "confirmedGuest" : true,
+             "age" : 46
         }
         
     ]
