@@ -41,37 +41,44 @@ var suppliesReady = function (suppliesSetUp){
 
 
 //Array Function
-  var firstStep = function (firstIngredients, preheat) {
+var firstStep = function (firstIngredients, preheat) {
+    var ingredients1 = firstIngredients;
     var lastIngredient = sauteIngredients.pop();      
     console.log("The first ingredients are " + firstIngredients + ", and " + lastIngredient + ".");
     sauteIngredients.push("1 Tablespoon minced garlic");
     while (preheat === true && sauteIngredients.length < 5){
     for (var i = 0; i < sauteIngredients.length; i++) {
         console.log("Added " + firstIngredients[i] + " to frying pan.");
-    };
+        
+        }
+    
     }
     console.log("Time to saute!");
-    return firstIngredients;
+    return ingredients1;
   };
  
 //String Function
 var nextSteps = function (secondProcessIngredients){
+    var ingredients2 = secondProcessIngredients;
     console.log("Add half the " + moreIngredients[3] + " to the chicken mixture.");
     console.log("Fill baking dish with " + moreIngredients[1] + ".");
     console.log ("Spoon mixture onto " + moreIngredients[0] + ", roll them and place seam side down into baking dish.");
     console.log ("Cover enchiladas with " + moreIngredients[2] + ".");
     console.log ("Cover baking dish with foil and bake for 35 minutes.");
-}
+    return ingredients2;
+};
 
 //Math Function 1
 
 var timeToBake = function (ovenTimer){
+    var minutes = ovenTimer;
     while (ovenTimer >= 0) {
         console.log("There are " + ovenTimer + " minutes baking time left."); 
         ovenTimer -= 5;
     }
     console.log("Remove foil, cover with cheese and cook for 5 more minutes or until cheese is melted.");               
     console.log("Enchiladas are ready to serve.");
+    return minutes;
 };
 
 //Boolean Function
@@ -84,10 +91,10 @@ var timeForTheDinner = function (attendees, dinnerReady){
         }else{
             console.log("Dinner is not yet ready to be served")
         }
+        return true;
     }
     
-    return attendees;
-    return dinnerReady;
+    
     
 };
 
@@ -101,11 +108,19 @@ var enchiladaCalculation = function (theCook, theGuests, totalEnchiladasAvailabl
 
 
 suppliesReady(suppliesSetUp);
-firstStep(sauteIngredients);
-nextSteps(moreIngredients);
-timeToBake(bakingTime);
-timeForTheDinner(guestsHaveArrived, enchiladasReady);
-enchiladaCalculation(theHost, comingToDinner, totalEnchiladas);
+var ingredients1 = firstStep(sauteIngredients, ovenPreheating);
+var ingredients2 = nextSteps(moreIngredients);
+var minutes = timeToBake(bakingTime);
+var guestsArrivedDinnerReady = timeForTheDinner(guestsHaveArrived, enchiladasReady);
+var enchiladaDivision = enchiladaCalculation(theHost, comingToDinner, totalEnchiladas);
+
+console.log("The Ingredients to make the enchiladas are: " + ingredients1 + ", " + ingredients2 + ".");
+console.log("The total cooking time for the enchiladas is " + minutes + "minutes.");
+console.log("Each person can have " + enchiladaDivision + " enchiladas.");
+console.log("It is " + guestsArrivedDinnerReady + " that dinner is ready and the guests have arrived.");
+
+
+
 
 
 
